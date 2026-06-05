@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase'
-import { Package, Clock, CheckCircle, TrendingUp, ShoppingBag, Users } from 'lucide-react'
+import { Clock, CheckCircle, TrendingUp, ShoppingBag } from 'lucide-react'
 import AdminOrderRow from '@/components/AdminOrderRow'
 
 export const revalidate = 0

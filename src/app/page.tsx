@@ -1,7 +1,7 @@
 import { supabase, Product } from '@/lib/supabase'
 import ProductCard from '@/components/ProductCard'
 import Link from 'next/link'
-import { ArrowRight, Truck, ShieldCheck, PhoneCall, Star, Zap, Gift } from 'lucide-react'
+import { ArrowRight, Truck, ShieldCheck, PhoneCall, Zap, Gift } from 'lucide-react'
 
 export default async function HomePage() {
 const { data: products } = await supabase

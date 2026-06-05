@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image'
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { supabase } from '@/lib/supabase'
@@ -51,7 +51,7 @@ export default function CheckoutPage() {
         </div>
         <p className="text-neutral-600 mb-8 leading-relaxed">
           سنتصل بك على واتساب لتأكيد التوصيل.<br />
-          <span className="text-sm text-neutral-400">We'll contact you on WhatsApp to confirm. Pay cash on arrival.</span>
+          <span className="text-sm text-neutral-400">We&apos;ll contact you on WhatsApp to confirm. Pay cash on arrival.</span>
         </p>
         <button onClick={() => router.push('/')} className="btn-primary py-3 px-10 text-base">
           العودة للرئيسية — Back to Home
@@ -124,7 +124,7 @@ export default function CheckoutPage() {
               {items.map(item => (
                 <div key={item.id} className="flex items-center gap-3">
                   <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-sand flex-shrink-0">
-                    <img src={item.image_url} alt={item.name} className="w-full h-full object-cover" />
+                    <Image src={item.image_url} alt={item.name} fill className="object-cover" sizes="48px" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs font-medium truncate">{item.name}</p>
